@@ -1,0 +1,154 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("guaramirim.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F7F9F9;
+  padding: 10px 20px;
+}
+
+.topnav h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0116cc;
+}
+
+.topnav img {
+  height: 50px;
+  width: 100px;
+}
+
+.topnav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.topnav li a {
+  border: 2px solid #003366;
+  background: white;
+  color: hwb(210 0% 60%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.topnav li a:hover {
+  background-color: #003366;
+  color: white;
+  border: 2px solid #003366;
+  }
+
+
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 40px;
+}
+
+div.flex-container h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+div.flex-container > div {
+  margin: 100px;
+  margin-bottom: 100px;
+}
+
+
+.overlay {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  opacity: 0.95;
+  z-index: 1;
+  padding: 40px 20px;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+}
+.overlay h2{
+text-align: center;
+}
+
+.overlay p{
+text-align: center;
+}
+
+
+div.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+div.gallery-item {
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+  background: #fff;
+  
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+  transform: scale(1.05);
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: 400px;   
+  object-fit: cover;
+  display: block;
+}
+
+div.gallery-item div.desc {
+  padding: 10px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+div.gallery p{
+ text-align: center;
+ text-align-last: center;
+}
+#galeria {
+  min-height: 100vh;
+}
+
+@media screen and (max-width:600px) {
+  div.gallery {
+    grid-template-columns: 1fr;
+  }
+}
